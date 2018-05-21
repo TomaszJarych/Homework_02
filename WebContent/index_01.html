@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Servlet_01</title>
+</head>
+
+<body>
+    <form action="http://localhost:8080/Homework_02/Servlet_01" method="post">
+        <label for="value">Wpisz kwotę</label>
+        <input type="number" step="0.01" name="value" id="value">
+        <input type="radio" name="radio" id="eur_to_usd" value="eur_to_usd">
+        <label for="eur_to_usd">EUR → USD</label>
+        <input type="radio" name="radio" id="usd_to_eur" value="usd_to_eur">
+        <label for="usd_to_eur">USD → EUR</label>
+        <input type="radio" name="radio" id="eur_to_pln" value="eur_to_pln">
+        <label for="eur_to_pln">EUR → PLN</label>
+        <input type="radio" name="radio" id="pln_to_eur" value="pln_to_eur">
+        <label for="pln_to_eur">PLN → EUR</label>
+        <input type="radio" name="radio" id="usd_to_pln" value="usd_to_pln">
+        <label for="usd_to_pln">USD → PLN</label>
+        <input type="radio" name="radio" id="pln_to_usd" value="pln_to_usd">
+        <label for="pln_to_usd">PLN → USD</label>
+        <input type="submit" value="Przelicz">
+    </form>
+
+</body>
+
+</html>
