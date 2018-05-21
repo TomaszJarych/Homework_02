@@ -17,15 +17,15 @@ public class Servlet_02 extends HttpServlet {
 		char[] binaryArray = binary.toCharArray();
 		String output = "";
 		int pow = 0;
-		int result=0;
+		int result = 0;
 		if (binaryCheck(binary)) {
-		for (int i = binaryArray.length-1; i >= 0; i--) {
-			int number = Character.getNumericValue(binaryArray[i]);
-			result += number * Math.pow(2, pow);
-			pow++;
-			
-		}	
-		output += "Wynik to " + result;
+			for (int i = binaryArray.length - 1; i >= 0; i--) {
+				int number = Character.getNumericValue(binaryArray[i]);
+				result += number * Math.pow(2, pow);
+				pow++;
+
+			}
+			output += "Wynik to " + result;
 		} else {
 			output += "Ciąg zawiera niedozwolone znaki";
 		}
@@ -33,20 +33,16 @@ public class Servlet_02 extends HttpServlet {
 	}
 
 	public boolean binaryCheck(String binary) {
-		String output = "";
 		char[] binaryArray = binary.toCharArray();
 		for (char c : binaryArray) {
 			if (c == '0' || c == '1') {
-				output += "";
+
 			} else {
-				output += "zawiera inne znaki";
+				return false;
 			}
+
 		}
-		if (output.isEmpty()) {
-			return true;
-		} else {
-			return false;
-		}
+		return true;
 	}
 }
 // #### Zadanie 2
